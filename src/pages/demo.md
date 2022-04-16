@@ -81,10 +81,14 @@ This is MDX, so it also allows us to import and use React Components. If you put
 
 <DemoComponent name={"MDX!"} />
 
-<Video src="/demo/video-demo.mp4" type="video/mp4" />
-<Image src="/demo/image-demo.svg" alt="Alternative text if the image fails to load" />
-<Image src="image-demo.svg" alt="If no absolute path is used, static files will have to be located under 'demo' folder (because this file is hosted at /demo and they will be referenced relatively)" />
+This is a video file: <Video src="/demo/video-demo.mp4" type="video/mp4" />
 
-This image will be used inline: <ImageInline src="image-demo.svg" alt="If no absolute path is used, static files will have to be located under 'demo' folder (because this file is hosted at /demo and they will be referenced relatively)" />
+This is an audio file: <Audio src="/demo/audio-demo.mp3" type="audio/mp3" />
 
-And this is Markdown image, which is also by default inline: ![Alternative text if the image fails to load](/demo/image-demo.svg "And this text is displayed on mouse hover")
+This is an image: <Image src="/demo/image-demo.svg" alt="Alternative text if the image fails to load" />
+
+Image with relative path: <Image src="image-demo.svg" alt="If no absolute path is used, static files will have to be located under 'demo' folder (because this file is hosted at /demo and they will be referenced relatively)" />
+
+This is an inline image: <ImageInline src="image-demo.svg" alt="If no absolute path is used, static files will have to be located under 'demo' folder (because this file is hosted at /demo and they will be referenced relatively)" />
+
+And this is a Markdown image, which is also inline by default: ![Alternative text if the image fails to load](/demo/image-demo.svg "And this text is displayed on mouse hover")
