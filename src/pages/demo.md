@@ -5,6 +5,7 @@ date: 2019-01-29
 ---
 # Markdown Cheatsheet
 
+<!--suppress ALL -->
 <hr />
 
 # Heading 1
@@ -84,4 +85,6 @@ This is MDX, so it also allows us to import and use React Components. If you put
 <Image src="/demo/image-demo.svg" alt="Alternative text if the image fails to load" />
 <Image src="image-demo.svg" alt="If no absolute path is used, static files will have to be located under 'demo' folder (because this file is hosted at /demo and they will be referenced relatively)" />
 
-Markdown-style image: ![Alternative text if the image fails to load](/demo/image-demo.svg "And this text is displayed on mouse hover")
+This image will be used inline: <ImageInline src="image-demo.svg" alt="If no absolute path is used, static files will have to be located under 'demo' folder (because this file is hosted at /demo and they will be referenced relatively)" />
+
+And this is Markdown image, which is also by default inline: ![Alternative text if the image fails to load](/demo/image-demo.svg "And this text is displayed on mouse hover")
