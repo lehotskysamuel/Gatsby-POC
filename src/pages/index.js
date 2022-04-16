@@ -1,40 +1,27 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
-const IndexPage = ({ data }) => {
-  console.log(data);
-
-  return (
-    <>
-      All Files:
-      <ul>
-        {data.allFile.nodes.map((node) => (
-          <li key={node.name}>{node.name}</li>
-        ))}
-      </ul>
-      <br />
-      All MDX:
-      <ul>
-        {data.allMdx.nodes.map((node) => (
+const IndexPage = ({ data }) => (
+  <>
+    <h1>Pages:</h1>
+    <ul>
+      {data.allMdx.nodes.map((node) => {
+        const title = node.frontmatter.title || node.slug;
+        return (
           <li key={node.id}>
-            {node.id} - {node.frontmatter.title}
+            <Link to={node.slug}>{title}</Link>
           </li>
-        ))}
-      </ul>
-    </>
-  );
-};
+        );
+      })}
+    </ul>
+  </>
+);
 
 export const query = graphql`
   query {
-    allFile {
-      nodes {
-        name
-      }
-    }
     allMdx {
       nodes {
-        id
+        slug
         frontmatter {
           title
         }
